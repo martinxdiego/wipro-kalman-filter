@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "kalmed"
+version = "0.1.0"
+description = "Kalman-Filter (EKF/IMM) für medizinische Messdaten – Starter"
+authors = [{name="Diego Martin"}]
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+  "numpy",
+  "scipy",
+  "matplotlib",
+]
+
+[project.optional-dependencies]
+dev = ["pytest", "ruff", "black", "mypy"]
+
+[tool.setuptools.packages.find]
+where = [""]
+include = ["kalmed*"]

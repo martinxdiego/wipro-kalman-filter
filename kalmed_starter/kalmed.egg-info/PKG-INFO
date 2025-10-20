@@ -1,0 +1,38 @@
+Metadata-Version: 2.4
+Name: kalmed
+Version: 0.1.0
+Summary: Kalman-Filter (EKF/IMM) für medizinische Messdaten – Starter
+Author: Diego Martin
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+Requires-Dist: numpy
+Requires-Dist: scipy
+Requires-Dist: matplotlib
+Provides-Extra: dev
+Requires-Dist: pytest; extra == "dev"
+Requires-Dist: ruff; extra == "dev"
+Requires-Dist: black; extra == "dev"
+Requires-Dist: mypy; extra == "dev"
+
+# kalmed — Kalman-Filter Starter (EKF) für medizinische Messdaten
+
+Dieses Starterpaket enthält:
+- Daten-Simulation für Herzfrequenz (HR) inkl. Rauschen, Dropouts, Spikes
+- Einfachen (E)KF für Zustandsraum [Level, Trend]
+- Metriken (RMSE, SNR-Gewinn) und Plots
+- `run_demo.py` zum schnellen Start (Simulieren → Filtern → Visualisieren)
+
+## Schnellstart
+```bash
+# 1) Virtuelle Umgebung
+python -m venv .venv
+source .venv/bin/activate  # Windows: .venv\Scripts\activate
+
+# 2) Install
+pip install -U pip
+pip install -e .
+
+# 3) Demo ausführen
+python run_demo.py
+```
+Die Plots werden in `./outputs` gespeichert.

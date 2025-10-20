@@ -1,0 +1,8 @@
+{
+    "dt": 0.1,
+    "r_meas": 6.0,
+    "dropout_prob": 0.05,
+    "spike_prob": 0.02,
+    "n": 600,
+    "flush_interval": 10
+}
