@@ -43,7 +43,7 @@ def get_base64_image(image_path):
     with open(image_path, "rb") as img_file:
         return base64.b64encode(img_file.read()).decode()
 
-logo_path = os.path.join("assets", "logo.png")
+logo_path = os.path.join(os.path.dirname(__file__), "assets", "logo.png")
 logo_b64 = get_base64_image(logo_path)
 
 st.markdown(f"""
@@ -327,3 +327,4 @@ with tab_reports:
             st.markdown(f"📎 **{file}** — [Download]({os.path.join(output_dir, file)})")
     else:
         st.info("Noch keine Reports vorhanden – führe zuerst eine Simulation aus.")
+
